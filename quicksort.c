@@ -132,7 +132,7 @@ int main()
 
 
 	// first job packet
-	addJob(a, N); // the entire array
+	
   global_queue[packets_created].a = a;
   global_queue[packets_created].n = n;
   packets_created++;
@@ -144,7 +144,7 @@ int main()
 	pthread_mutex_lock(&mutex);
 	while(numbers_sorted != N){
 		pthread_cond_wait(&packet_out, &mutex);
-		printf("checking? for shutdown\n");
+		
 	}
 	
   printf("Exit.......\n");
